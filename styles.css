@@ -1,0 +1,204 @@
+/* Common styles for all screen sizes */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('apex_legends_background.jpg'); /* Add the background image to the body */
+    background-size: cover;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: fit-content; /* Adjust the width based on the content size */
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Update to semi-transparent black background */
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px;
+    white-space: nowrap; /* Prevent label text from wrapping */
+    color: #FFFFFF; /* Change label text color to white */
+}
+
+input[type="text"],
+select {
+    font-size: 16px;
+    padding: 8px;
+    border: 2px solid #7289DA;
+    border-radius: 4px;
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    flex: 1; /* Use flex property to fill remaining space in the row */
+    max-width: 200px; /* Limit the maximum width of the filter inputs */
+}
+
+button {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #7289DA;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5B6EAC; /* Darker color on hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #303030;
+    color: #FFFFFF;
+    text-shadow: 2px 2px #000000;
+    cursor: pointer;
+}
+
+th.sorted {
+    background-color: #7289DA;
+}
+
+th.sorted::after {
+    content: ' ▼';
+    margin-left: 5px;
+}
+
+th.sorted.asc::after {
+    content: ' ▲';
+}
+
+tr:nth-child(even) {
+    background-color: #1F1F1F;
+}
+
+tr:hover {
+    background-color: #424242;
+}
+
+h1 {
+    color: #FFFFFF;
+    text-shadow: 2px 2px #000000;
+}
+
+.filters {
+    border: 2px solid #7289DA;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+label {
+    color: #FFFFFF;
+}
+
+input[type="text"],
+select {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    border: 2px solid #7289DA;
+}
+
+button {
+    background-color: #7289DA; 
+}
+
+button:hover {
+    background-color: #5B6EAC; /* Darker color on hover */
+}
+
+table {
+    border: 2px solid #7289DA; 
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th {
+    background-color: #303030;
+    color: #FFFFFF;
+    text-shadow: 2px 2px #000000;
+    cursor: pointer;
+}
+
+th.sorted {
+    background-color: #7289DA;
+}
+
+th.sorted::after {
+    content: ' ▼';
+    margin-left: 5px;
+}
+
+th.sorted.asc::after {
+    content: ' ▲';
+}
+
+tr:nth-child(even) {
+    background-color: #1F1F1F;
+}
+
+tr:hover {
+    background-color: #424242;
+}
+
+/* Adjust the table width and add margin for better appearance */
+table {
+    margin-top: 20px;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters > * {
+        width: 100%;
+    }
+}
+
+/* Style for social media icons */
+.social-icon {
+    margin-right: 8px;
+    color: #7289DA; 
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
